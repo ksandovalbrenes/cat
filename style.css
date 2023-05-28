@@ -14,13 +14,9 @@
 
 .pixel {
     box-sizing: border-box;
-    background-color: #E4E4E5;
+    background-color: #f0eded;
     text-align: center;
     width: 1fr;
     height: 2vw;
     font-size: 2px;
-}
-
-.pixel:hover {
-    background-color: rgb(143, 143, 143);
 }
