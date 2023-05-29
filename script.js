@@ -67,13 +67,11 @@ const sleepingCat2 = [
 ];
 
 
-function print(matrix, currentMatrix){
-    let k = 0;
+function drawContainer(matrix, currentMatrix){
     for (let i = 0; i < matrix.length; i++){
         for (let j = 0; j < matrix[i].length; j++){
             if (matrix[i][j] != 0 || currentMatrix[i][j] != 0){
                 drawPixel(i, j, matrix[i][j], elements);
-                k++;
             } 
         }
     }
@@ -108,9 +106,9 @@ function sleep(ms){
 
 async function loop() {
     while(true){
-        print(sleepingCat1, sleepingCat2);
+        drawContainer(sleepingCat1, sleepingCat2);
         await sleep(1000);
-        print(sleepingCat2, sleepingCat1);
+        drawContainer(sleepingCat2, sleepingCat1);
         await sleep(800);
     }
 }
